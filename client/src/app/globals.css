@@ -1,0 +1,23 @@
+@import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --hover-text-primary : #005580;
+  --hover-text-secondary : #049595;
+  --black-text-primary : #2C2C2C;
+  --border-primary : #DCDCDC;
+  --shortTitle : #888888;
+  --shortText: #656565;
+  --bg-lightblue : #EDF5F8;
+}
+
+@theme inline {
+  --color-primary: var(--hover-text-primary);
+  --color-secondary : var(--hover-text-secondary);
+  --color-tw-black : var(--black-text-primary);
+  --color-tw-primary : var(--border-primary);
+  --color-darkgray : var(--shortTitle);
+  --color-tw-lightgray : var(--shortText);
+  --color-tw-blue : var(--bg-lightblue); 
+}

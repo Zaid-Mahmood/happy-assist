@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "industry_cards",
+  "info": {
+    "singularName": "industry-card",
+    "pluralName": "industry-cards",
+    "displayName": "Industry Card"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "href": {
+      "type": "string"
+    }
+  }
+}
