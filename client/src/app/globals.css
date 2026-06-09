@@ -10,6 +10,7 @@ html {
   --shortTitle : #888888;
   --shortText: #656565;
   --bg-lightblue : #EDF5F8;
+  --bg-banner: #001218;
 }
 
 @theme inline {
@@ -20,4 +21,5 @@ html {
   --color-darkgray : var(--shortTitle);
   --color-tw-lightgray : var(--shortText);
   --color-tw-blue : var(--bg-lightblue); 
+  --color-tw-bannerBlack : var(--bg-banner)
 }

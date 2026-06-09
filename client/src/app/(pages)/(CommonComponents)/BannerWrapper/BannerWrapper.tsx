@@ -2,10 +2,9 @@
 
 import Image, { StaticImageData } from "next/image";
 import { useRouter } from "next/navigation";
-// import DividerLine from "./DividerLine";
 import { FaArrowRight } from "react-icons/fa";
 type BannerProps = {
-  shortTitle : string ,
+  shortTitle: string;
   title: React.ReactNode;
   description: string;
   image: StaticImageData;
@@ -17,7 +16,7 @@ type BannerProps = {
 };
 
 const BannerWrapper = ({
-  shortTitle ,
+  shortTitle,
   title,
   description,
   image,
@@ -49,7 +48,9 @@ const BannerWrapper = ({
     <section className="w-full bg-white px-4 sm:px-6 md:px-10 lg:px-16">
       <div className="mx-auto flex w-full flex-col items-center gap-8 px-4 pt-10 sm:px-6 md:px-10 lg:flex-row lg:py-13 xl:px-0">
         <div className="w-full text-center md:text-left">
-          <small className="font-body text-darkgray font-bold text-[13px] pb-3">{shortTitle}</small>
+          <small className="font-body text-darkgray font-bold text-[13px] pb-3">
+            {shortTitle}
+          </small>
           <h1 className="h-auto text-[28px] font-semibold leading-[150%] text-tw-black sm:text-[36px] lg:h-[144px] lg:text-[48px] font-heading">
             {title}
           </h1>

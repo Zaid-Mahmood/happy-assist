@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "features_cards",
+  "info": {
+    "singularName": "features-card",
+    "pluralName": "features-cards",
+    "displayName": "FeaturesCard"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "images": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
