@@ -27,19 +27,24 @@ const ClientReviews = () => {
 
   const [activeSlide, setActiveSlide] = useState(0);
   const [cardsPerSlide, setCardsPerSlide] = useState(3);
- useEffect(() => {
-  const handleResize = () => {
-    setCardsPerSlide(window.innerWidth < 768 ? 1 : 3);
+  const [expandedReviews, setExpandedReviews] = useState<number[]>([]);
+  useEffect(() => {
+    const handleResize = () => {
+      setCardsPerSlide(window.innerWidth < 768 ? 1 : 3);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const totalSlides = Math.ceil(cards.length / cardsPerSlide);
+  const toggleReview = (id: number) => {
+    setExpandedReviews((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id],
+    );
   };
-
-  handleResize();
-  window.addEventListener("resize", handleResize);
-
-  return () => window.removeEventListener("resize", handleResize);
-}, []);
-
-const totalSlides = Math.ceil(cards.length / cardsPerSlide);
-
   useEffect(() => {
     if (totalSlides <= 1) return;
 
@@ -52,7 +57,6 @@ const totalSlides = Math.ceil(cards.length / cardsPerSlide);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
-  console.log(cards, "cardss");
   return (
     <section className="px-8 py-5 text-center md:px-16 md:py-13">
       <small className="font-body text-[13px] font-bold text-primary">
@@ -104,11 +108,25 @@ const totalSlides = Math.ceil(cards.length / cardsPerSlide);
                           </span>
                         </div>
 
-                        <p className="mt-3 text-sm italic leading-[170%] text-[#666]">
-                          {item.review}
+                        <p className={`text-sm italic leading-[170%] text-[#666] ${expandedReviews ? 'h-fit' : 'h-5'}`}>
+                          {expandedReviews.includes(item.id)
+                            ?  item.review
+                            : item.review.length > 80
+                              ?  `${item.review.slice(0, 80)}...`
+                              : item.review}
                         </p>
+                        {item.review.length > 80 && (
+                          <button
+                            onClick={() => toggleReview(item.id)}
+                            className="mt-2 text-sm font-medium text-primary hover:underline cursor-pointer"
+                          >
+                            {expandedReviews.includes(item.id)
+                              ? "Read Less"
+                              : "Read More"}
+                          </button>
+                        )}
                       </div>
-                      <div className="mt-8 flex items-center gap-3  min-h-[10px]">
+                      <div className="mt-8 flex items-center gap-3">
                         {authorImgUrl && (
                           <Image
                             src={authorImgUrl}
@@ -137,13 +155,12 @@ const totalSlides = Math.ceil(cards.length / cardsPerSlide);
       </div>
 
       {cards.length > 3 && (
-        
         <div className="mt-8 flex justify-center gap-3 hidden md:block">
           {Array.from({ length: totalSlides }).map((_, index) => (
             <button
               key={index}
               onClick={() => setActiveSlide(index)}
-              className={`h-[3px] rounded-full transition-all ${
+              className={`h-[3px] rounded-full transition-all cursor-pointer ${
                 activeSlide === index ? "w-8 bg-[#262626]" : "w-6 bg-[#E5E5E5]"
               }`}
             />

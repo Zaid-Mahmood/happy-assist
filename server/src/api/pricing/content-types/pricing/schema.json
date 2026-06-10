@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pricings",
+  "info": {
+    "singularName": "pricing",
+    "pluralName": "pricings",
+    "displayName": "Pricing"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "planType": {
+      "type": "string"
+    },
+    "planDescription": {
+      "type": "text"
+    },
+    "Rate": {
+      "type": "string"
+    },
+    "pricingDetail": {
+      "type": "string"
+    },
+    "details": {
+      "type": "blocks"
+    },
+    "href": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer"
+    }
+  }
+}

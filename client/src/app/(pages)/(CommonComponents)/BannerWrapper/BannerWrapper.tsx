@@ -7,7 +7,7 @@ type BannerProps = {
   shortTitle: string;
   title: React.ReactNode;
   description: string;
-  image: StaticImageData;
+  img: StaticImageData;
   btnPrimaryText?: string;
   btnSecondaryText?: string;
   primaryHref?: string;
@@ -19,7 +19,7 @@ const BannerWrapper = ({
   shortTitle,
   title,
   description,
-  image,
+  img,
   btnPrimaryText,
   btnSecondaryText,
   primaryHref,
@@ -92,8 +92,9 @@ const BannerWrapper = ({
 
         <div className="flex w-full justify-center lg:justify-end">
           <Image
-            src={image}
+            src={img}
             alt="banner"
+
             className="h-[516px]  max-w-[500px] sm:max-w-[500px] lg:max-w-[661px]"
             priority
           />

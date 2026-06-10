@@ -503,6 +503,40 @@ export interface ApiIndustryCardIndustryCard
   };
 }
 
+export interface ApiPricingPricing extends Struct.CollectionTypeSchema {
+  collectionName: 'pricings';
+  info: {
+    displayName: 'Pricing';
+    pluralName: 'pricings';
+    singularName: 'pricing';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    details: Schema.Attribute.Blocks;
+    href: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pricing.pricing'
+    > &
+      Schema.Attribute.Private;
+    order: Schema.Attribute.Integer;
+    planDescription: Schema.Attribute.Text;
+    planType: Schema.Attribute.String;
+    pricingDetail: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    Rate: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiStepCardStepCard extends Struct.CollectionTypeSchema {
   collectionName: 'step_cards';
   info: {
@@ -1081,6 +1115,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::features-card.features-card': ApiFeaturesCardFeaturesCard;
       'api::industry-card.industry-card': ApiIndustryCardIndustryCard;
+      'api::pricing.pricing': ApiPricingPricing;
       'api::step-card.step-card': ApiStepCardStepCard;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
       'plugin::content-releases.release': PluginContentReleasesRelease;
