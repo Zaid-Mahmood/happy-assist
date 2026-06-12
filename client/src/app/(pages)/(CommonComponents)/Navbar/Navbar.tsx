@@ -24,9 +24,6 @@ const industries = [
     { label: "Home Services", href: "#" },
     { label: "Clinics", href: "#" },
     { label: "Solar Services", href: "#" },
-    // { label: "Legal Services", href: "#" },
-    // { label: "Locksmith Services", href: "#" },
-    // { label: "Real Estate Services", href: "#" },
 ];
 
 export default function Navbar() {

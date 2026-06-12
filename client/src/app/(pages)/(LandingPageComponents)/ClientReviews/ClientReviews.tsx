@@ -58,7 +58,7 @@ const ClientReviews = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
   return (
-    <section className="px-8 py-5 text-center md:px-16 md:py-13">
+    <section className="px-5 py-8 text-center md:px-16 md:py-13">
       <small className="font-body text-[13px] font-bold text-primary">
         Testimonials
       </small>

@@ -12,6 +12,7 @@ html {
   --bg-lightblue : #EDF5F8;
   --bg-banner: #001218;
   --text-accent: #FFDD33;
+  --accordion-black : #262626;
 }
 
 @theme inline {
@@ -24,4 +25,9 @@ html {
   --color-tw-blue : var(--bg-lightblue); 
   --color-tw-bannerBlack : var(--bg-banner);
   --color-tw-accent : var(--text-accent);
+  --color-tw-accordion : var(--accordion-black);
+}
+@theme {
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
 }

@@ -3,11 +3,14 @@
 import Image, { StaticImageData } from "next/image";
 import { useRouter } from "next/navigation";
 import { FaArrowRight } from "react-icons/fa";
+import VoiceAgentCard from "../../(LandingPageComponents)/VoiceAgentCard/VoiceAgentCard";
+
 type BannerProps = {
   shortTitle: string;
   title: React.ReactNode;
   description: string;
-  img: StaticImageData;
+  img?: StaticImageData;
+  showVoiceAgent?: boolean;
   btnPrimaryText?: string;
   btnSecondaryText?: string;
   primaryHref?: string;
@@ -20,6 +23,7 @@ const BannerWrapper = ({
   title,
   description,
   img,
+  showVoiceAgent = false,
   btnPrimaryText,
   btnSecondaryText,
   primaryHref,
@@ -29,19 +33,13 @@ const BannerWrapper = ({
   const router = useRouter();
 
   const handlePrimaryClick = () => {
-    if (onPrimaryClick) {
-      onPrimaryClick();
-    } else if (primaryHref) {
-      window.open(primaryHref, "_blank", "noopener,noreferrer");
-    }
+    if (onPrimaryClick) onPrimaryClick();
+    else if (primaryHref) window.open(primaryHref, "_blank", "noopener,noreferrer");
   };
 
   const handleSecondaryClick = () => {
-    if (onSecondaryClick) {
-      onSecondaryClick();
-    } else {
-      router.push("/aboutus");
-    }
+    if (onSecondaryClick) onSecondaryClick();
+    else router.push("/aboutus");
   };
 
   return (
@@ -51,6 +49,7 @@ const BannerWrapper = ({
           <small className="font-body text-darkgray font-bold text-[13px] pb-3">
             {shortTitle}
           </small>
+
           <h1 className="h-auto text-[28px] font-semibold leading-[150%] text-tw-black sm:text-[36px] lg:h-[144px] lg:text-[48px] font-heading">
             {title}
           </h1>
@@ -64,12 +63,11 @@ const BannerWrapper = ({
               <button
                 type="button"
                 onClick={handlePrimaryClick}
-                className="group flex h-[42px] w-full items-center justify-center gap-2 rounded-full border border-secondary px-5 text-base font-semibold text-secondary transition-all duration-300 hover:bg-secondary hover:text-white sm:w-fit cursor-pointer"
+                className="group flex h-[42px] w-full items-center justify-center gap-2 rounded-full border border-secondary px-5 text-base font-semibold text-white bg-secondary transition-all duration-300 hover:bg-[#047777] hover:text-white sm:w-fit cursor-pointer"
               >
                 {btnPrimaryText}
-
-                <span className="flex h-5 w-5 items-center justify-center rounded-full border border-secondary bg-white transition-colors duration-300">
-                  <FaArrowRight className="text-[10px] text-secondary transition-transform duration-300 group-hover:translate-x-[1px]" />
+                <span className="flex h-5 w-5 items-center justify-center rounded-full border border-secondary bg-white">
+                  <FaArrowRight className="text-[10px] text-secondary" />
                 </span>
               </button>
             )}
@@ -78,12 +76,11 @@ const BannerWrapper = ({
               <button
                 type="button"
                 onClick={handleSecondaryClick}
-                className="group flex h-[42px] w-full items-center justify-center gap-2 rounded-full border border-secondary px-5 text-base font-semibold text-secondary transition-all duration-300 hover:bg-secondary hover:text-white sm:w-fit cursor-pointer"
+                className="group flex h-[42px] w-full items-center justify-center gap-2 rounded-full border border-secondary px-5 text-base font-semibold text-secondary transition-all duration-300 hover:bg-black/5 hover:text-secondary sm:w-fit cursor-pointer"
               >
                 {btnSecondaryText}
-
-                <span className="flex h-5 w-5 items-center justify-center rounded-full border border-secondary bg-white transition-colors duration-300">
-                  <FaArrowRight className="text-[10px] text-secondary transition-transform duration-300 group-hover:translate-x-[1px]" />
+                <span className="flex h-5 w-5 items-center justify-center rounded-full border border-secondary bg-white">
+                  <FaArrowRight className="text-[10px] text-secondary" />
                 </span>
               </button>
             )}
@@ -91,17 +88,20 @@ const BannerWrapper = ({
         </div>
 
         <div className="flex w-full justify-center lg:justify-end">
-          <Image
-            src={img}
-            alt="banner"
-
-            className="h-[516px]  max-w-[500px] sm:max-w-[500px] lg:max-w-[661px]"
-            priority
-          />
+          {showVoiceAgent ? (
+            <VoiceAgentCard />
+          ) : (
+            img && (
+              <Image
+                src={img}
+                alt="banner"
+                className="h-[516px] max-w-[500px] sm:max-w-[500px] lg:max-w-[661px]"
+                priority
+              />
+            )
+          )}
         </div>
       </div>
-
-      {/* <DividerLine /> */}
     </section>
   );
 };

@@ -7,14 +7,16 @@ import OnBoardingSection from "./OnBoardingSection/OnBoardingSection";
 import FeaturesSection from "./FeaturesSection/FeaturesSection";
 import ClientReviews from "./ClientReviews/ClientReviews";
 import PricingSection from "./PricingSection/PricingSection";
+import HomePageFaqs from "./HomePageFaqs/HomePageFaqs";
+import Footer from "../(CommonComponents)/Footer/Footer";
 const LandingPage = () => {
   return (
     <div>
       <BannerWrapper
         shortTitle="Meet HappyAssist!"
         title="Your Best AI Assistant to Capture All Leads"
-        description="Stop missing out on opportunities with HappyAssist, which helps you answer all calls around the clock. Handle calls, schedule appointments, take notes, and address FAQs automatically and intelligently with your new AI agent that never sleeps."
-        img={bannerImg}
+        description="Stop missing out on opportunities with HappyAssist, which helps you answer all calls around the clock."
+        showVoiceAgent={true}
         btnPrimaryText="Get Started"
         btnSecondaryText="Book a Demo"
         primaryHref="#"
@@ -24,8 +26,10 @@ const LandingPage = () => {
       <WorkingMethodsTitles />
       <OnBoardingSection />
       <FeaturesSection />
-      <ClientReviews/>
-      <PricingSection/>
+      <ClientReviews />
+      <PricingSection />
+      <HomePageFaqs />
+      <Footer/>
     </div>
   );
 };

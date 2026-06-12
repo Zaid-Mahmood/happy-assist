@@ -28,7 +28,6 @@ type PricingCard = {
 
 const PricingPlans = () => {
   const baseUrl = process.env.NEXT_PUBLIC_STRAPI_URL;
-
   const {
     data: cards,
     loading,
@@ -39,7 +38,7 @@ const PricingPlans = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <div className="z-30 py-11">
+    <div className="pt-11">
       <div className="space-y-6">
         {cards.map((item) => {
           const detailsList =
@@ -53,30 +52,30 @@ const PricingPlans = () => {
               key={item.id}
               className="rounded-4xl border border-tw-primary bg-white p-3 text-left shadow-[0px_0px_35px_rgba(0,0,0,0.06)]"
             >
-              <h2 className="font-heading text-2xl font-medium text-[#262626]">
+              <h2 className="font-heading text-2xl font-medium text-[#262626] p-3">
                 {item.planType}
               </h2>
 
-              <p className="mt-2 font-body text-base text-[#BDBDBD]">
+              <p className="mt-2 font-body text-base text-[#BDBDBD] px-3">
                 {item.planDescription}
               </p>
-
-              <div className="mt-6 flex items-center justify-between gap-4">
-                <p className="font-heading text-5xl font-semibold text-tw-accent">
-                  {item.Rate}
+              <hr className="text-tw-primary mx-3 my-3" />
+              <div className="mt-6 flex items-center justify-between gap-4 font-heading px-3">
+                <p className="font-heading text-3xl md:text-5xl font-semibold text-tw-accent">
+                  <span className="text-xl">$ </span>
+                  {item.Rate} <span className="text-xl">/ month</span>
                 </p>
 
                 <Link
                   href={item.href}
-                  className="inline-flex items-center gap-x-2 rounded-full bg-secondary px-[13px] py-4 text-white"
+                  className="inline-flex items-center gap-x-2 rounded-full bg-secondary p-4 md:px-[33px] md:py-4 text-white  text-xs md:text-base w-52 md:w-auto"
                 >
-                  {item.pricingDetail}
+                 <span > {item.pricingDetail} </span>
                   <Image src={rightArrow} alt="right-arrow" />
                 </Link>
               </div>
-
-              <div className="mt-5 rounded-xl bg-[#FAFAFA] p-4">
-                <p className="mb-3 text-xs font-medium text-[#262626]">
+              <div className="mt-5 rounded-xl bg-[#FAFAFA] p-4 font-body">
+                <p className="mb-3 text-xs font-bold text-darkgray">
                   What&apos;s included:
                 </p>
 
@@ -91,9 +90,8 @@ const PricingPlans = () => {
                         alt="check-arrow"
                         width={20}
                         height={20}
-                        className="mt-[2px]"
+                        className="mt-[2px] md:w-5 h-5 w-4 h-4 object-contain"
                       />
-
                       <span>{detail}</span>
                     </li>
                   ))}

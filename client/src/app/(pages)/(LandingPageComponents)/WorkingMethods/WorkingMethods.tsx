@@ -140,7 +140,7 @@ const WorkingMethods = () => {
 
             <Link
               href={activeCard.ctaLink || "#"}
-              className="mt-5 inline-flex rounded-full border border-[#262626] px-6 py-2.5 text-sm font-medium text-[#262626] md:px-8 md:py-3 hover:bg-black hover:bg-black/5"
+              className="mt-5 inline-flex rounded-full border border-[#262626] px-6 py-2.5 text-sm font-medium text-[#262626] md:px-8 md:py-3 hover:bg-black/5"
             >
               {activeCard.ctaText}
             </Link>

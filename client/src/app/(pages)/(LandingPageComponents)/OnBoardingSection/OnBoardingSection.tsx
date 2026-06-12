@@ -36,18 +36,18 @@ const OnBoardingSection = () => {
         </div>
 
         <div className="-mt-14 bg-white px-4 md:-mt-28 md:px-8">
-          <div className="flex justify-center gap-x-6 pb-13 md:pb-[103px]">
+          <div className="flex justify-center gap-x-3 md:gap-x-6 pb-13 md:pb-[103px]">
             {boardingSteps.map((item, index) => {
               if (index !== 1) {
                 return (
                   <div
                     key={index}
-                    className="w-fit relative overflow-hidden rounded-[30px] border border-[#E5E5E5] bg-white pt-5 text-center md:mt-8 z-50"
+                    className="w-full md:w-fit relative overflow-hidden rounded-xl md:rounded-[30px] border border-[#E5E5E5] bg-white pt-5 text-center md:mt-8 z-50"
                   >
                     <p className="font-body text-xs text-[#8C8C8C]">
                       {item.name}
                     </p>
-                    <h3 className="mx-auto mt-3 max-w-[240px] font-body text-sm font-bold leading-[150%] text-[#262626] text-[5px] px-2 sm:px-0 sm:text-xs  md:text-base">
+                    <h3 className="mx-auto mt-3 max-w-[240px] font-body font-bold leading-[150%] text-[#262626] px-2 sm:px-0 text-xs md:text-base">
                       {item.title}
                     </h3>
 
@@ -55,7 +55,7 @@ const OnBoardingSection = () => {
                       <Image
                         src={item.img}
                         alt={item.title}
-                        className="h-auto w-full "
+                        className="absolute bottom-0 md:static h-auto w-full"
                       />
                     </div>
                   </div>
@@ -65,7 +65,7 @@ const OnBoardingSection = () => {
               return (
                 <div
                   key={index}
-                  className="w-fit relative overflow-hidden rounded-[30px] border border-[#E5E5E5] bg-white pb-5 text-center md:mt-8 z-50"
+                  className="w-full md:w-fit relative overflow-hidden rounded-xl md:rounded-[30px] border border-[#E5E5E5] bg-white pb-5 text-center md:mt-8 z-50"
                 >
                   <div className="flex justify-center">
                     <Image
@@ -78,7 +78,7 @@ const OnBoardingSection = () => {
                     <p className="font-body text-xs text-[#8C8C8C]">
                       {item.name}
                     </p>
-                    <h3 className="mt-3 mx-auto max-w-[240px] font-body font-bold leading-[150%] text-[#262626] text-[5px] px-2 sm:px-0 sm:text-xs  md:text-base">
+                    <h3 className="mt-3 mx-auto max-w-[240px] font-body font-bold leading-[150%] text-[#262626] px-2 sm:px-0 text-xs  md:text-base">
                       {item.title}
                     </h3>
                   </div>

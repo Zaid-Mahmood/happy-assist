@@ -22,7 +22,7 @@ const FeaturesSection = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
   return (
-    <div className="bg-tw-blue p-12 text-center">
+    <div className="bg-tw-blue px-5 py-8 md:py-13 md:px-16 text-center">
       <small className="text-primary font-body text-[13px] font-bold">
         Core Features
       </small>
@@ -30,7 +30,7 @@ const FeaturesSection = () => {
         Explore What Your AI Partner Can Do for You
       </h2>
 
-      <div className="pt-11 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="pt-11 grid gap-6 grid-cols-1 lg:grid-cols-3">
         {cards.map((card) => {
           const iconUrl = card?.image?.url
             ? `${baseUrl}${card?.image.url}`

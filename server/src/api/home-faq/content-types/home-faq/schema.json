@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_faqs",
+  "info": {
+    "singularName": "home-faq",
+    "pluralName": "home-faqs",
+    "displayName": "HomeFaq"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "faqHeading": {
+      "type": "string"
+    },
+    "faqDesc": {
+      "type": "text"
+    }
+  }
+}

@@ -13,7 +13,7 @@ const AvailabilitySection = () => {
           return (
             <div className='flex flex-col items-center' key={index} >
               <h3 className="font-heading text-xl md:text-5xl font-semibold leading-none text-tw-black">{item.value}</h3>
-              <p className="font-body mt-3 text-xs lg:text-base text-tw-lightgray w-[200px] text-center">{item.label}</p>
+              <p className="font-body mt-3 text-[8px] md:text-base text-tw-lightgray w-[200px] text-center">{item.label}</p>
             </div>
           );
         })}
