@@ -1,8 +1,8 @@
 "use client";
 
 import { useFetchData } from "@/app/customhooks/useFetchData";
-import rightArrow from "@/assets/pricing-section-imgs/arrow.png";
-import checkArrow from "@/assets/pricing-section-imgs/check.png";
+import rightArrow from "@/assets/home-page-imgs/pricing-section-imgs/arrow.png";
+import checkArrow from "@/assets/home-page-imgs/pricing-section-imgs/check.png";
 import Image from "next/image";
 import Link from "next/link";
 type StrapiTextChild = {
@@ -46,7 +46,7 @@ const PricingPlans = () => {
               ?.flatMap((block) => block.children || [])
               ?.map((child) => child.children?.[0]?.text?.trim())
               ?.filter(Boolean) || [];
-
+          console.log(item.planType, "plaT");
           return (
             <div
               key={item.id}
@@ -62,15 +62,20 @@ const PricingPlans = () => {
               <hr className="text-tw-primary mx-3 my-3" />
               <div className="mt-6 flex items-center justify-between gap-4 font-heading px-3">
                 <p className="font-heading text-3xl md:text-5xl font-semibold text-tw-accent">
-                  <span className="text-xl">$ </span>
-                  {item.Rate} <span className="text-xl">/ month</span>
+                  {item.planType !== "Enterprise Plan" ? (
+                    <>
+                      <span className="text-xl">$</span> {item.Rate}{" "}
+                      <span className="text-xl">/ month</span>
+                    </>
+                  ) : (
+                    <span className="text-3xl md:text-5xl">{item.Rate}</span>
+                  )}
                 </p>
-
                 <Link
                   href={item.href}
                   className="inline-flex items-center gap-x-2 rounded-full bg-secondary p-4 md:px-[33px] md:py-4 text-white  text-xs md:text-base w-52 md:w-auto"
                 >
-                 <span > {item.pricingDetail} </span>
+                  <span> {item.pricingDetail} </span>
                   <Image src={rightArrow} alt="right-arrow" />
                 </Link>
               </div>

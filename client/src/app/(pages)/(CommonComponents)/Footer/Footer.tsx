@@ -16,7 +16,7 @@ const Footer = () => {
   ];
   const footerLinks = [
     { title: "Home", href: "/" },
-    { title: "Pricing", href: "#" },
+    { title: "Pricing", href: "/pricing/" },
     { title: "Industries", href: "#" },
     { title: "Blog", href: "#" },
     { title: "Contact Us", href: "#" },
@@ -40,11 +40,10 @@ const Footer = () => {
       <div className="relative z-50 px-5 md:px-16 md:pt-13">
         <div className="text-center max-w-[774px] mx-auto pb-16 md:pb-[104px]">
           <h2 className="text-tw-black text-3xl md:text-6xl font-heading font-semibold">
-            Seamless Automation with No Overheads
+           Change “Busy! Will Call You Later” To “Let’s Connect”
           </h2>
           <p className="pt-3 text-tw-lightgray text-base md:text-xl pb-6 md:pb-11">
-            Say no to manual work and automate your core business operations
-            with zero errors to scale your business.
+          HappyAssist will help you to scale your business even when you and your team members are offline. This will allow you to stay present for your customers, always building trust and satisfaction.
           </p>
           <div className="flex gap-x-2 justify-center">
             <button
@@ -52,7 +51,7 @@ const Footer = () => {
               // onClick={handlePrimaryClick}
               className="group flex h-[42px] w-full items-center justify-center gap-2 rounded-full border border-secondary px-5 text-base font-semibold text-secondary transition-all duration-300 hover:bg-[#004466] text-white sm:w-fit cursor-pointer bg-primary"
             >
-              Try AI Now
+             Get Started
               <span className="flex h-5 w-5 items-center justify-center rounded-full border border-secondary bg-white transition-colors duration-300">
                 <FaArrowRight className="text-[10px] text-primary transition-transform duration-300 group-hover:translate-x-[1px]" />
               </span>
@@ -100,7 +99,7 @@ const Footer = () => {
               </div>
 
               <p className="md:text-[13px] text-xs text-center md:text-start text-primary">
-                By subscribing you agree to our Privacy Policy.
+                Stay Ahead with AI Insights. Get updates, strategies, and tips to grow your business with automation.
               </p>
             </div>
           </div>

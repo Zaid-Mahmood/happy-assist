@@ -1,21 +1,21 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  allowedDevOrigins: ["http://192.168.1.5:3000" , "192.168.1.5"],
+  allowedDevOrigins: ["http://192.168.18.187:3000" , "192.168.18.187"],
   images: {
   remotePatterns: [
         {
         protocol: "http",
-        hostname: "192.168.1.5",
+        hostname: "192.168.18.187",
         port: "1337",
         pathname: "/uploads/**",
       },
-    {
-      protocol: "http",
-      hostname: "localhost",
-      port: "1337",
-      pathname: "/uploads/**",
-    },
+    // {
+    //   protocol: "http",
+    //   hostname: "localhost",
+    //   port: "1337",
+    //   pathname: "/uploads/**",
+    // },
   ],
 },
   reactCompiler: true,

@@ -493,6 +493,7 @@ export interface ApiHomeFaqHomeFaq extends Struct.CollectionTypeSchema {
       'api::home-faq.home-faq'
     > &
       Schema.Attribute.Private;
+    page: Schema.Attribute.Enumeration<['home', 'pricing']>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

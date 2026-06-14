@@ -16,6 +16,13 @@
     },
     "faqDesc": {
       "type": "text"
+    },
+    "page": {
+      "type": "enumeration",
+      "enum": [
+        "home",
+        "pricing"
+      ]
     }
   }
 }

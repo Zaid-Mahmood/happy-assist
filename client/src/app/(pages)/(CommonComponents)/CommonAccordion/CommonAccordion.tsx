@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import upArrow from "@/assets/faqs-imgs/up-arrow.png";
-import downArrow from "@/assets/faqs-imgs/down-arrow.png";
+import upArrow from "@/assets/home-page-imgs/faqs-imgs/up-arrow.png";
+import downArrow from "@/assets/home-page-imgs/faqs-imgs/down-arrow.png";
 
 import { useState } from "react";
 interface AccordionItem {

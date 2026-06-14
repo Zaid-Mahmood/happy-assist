@@ -1,5 +1,4 @@
 import BannerWrapper from "../(CommonComponents)/BannerWrapper/BannerWrapper";
-import bannerImg from "@/assets/banner-imgs/banner-img.svg";
 import AvailabilitySection from "./AvailabilitySection/AvailabilitySection";
 import IndustriesText from "./IndustriesCards/IndustriesText";
 import WorkingMethodsTitles from "./WorkingMethods/WorkingMethodsTitles";
@@ -8,7 +7,6 @@ import FeaturesSection from "./FeaturesSection/FeaturesSection";
 import ClientReviews from "./ClientReviews/ClientReviews";
 import PricingSection from "./PricingSection/PricingSection";
 import HomePageFaqs from "./HomePageFaqs/HomePageFaqs";
-import Footer from "../(CommonComponents)/Footer/Footer";
 const LandingPage = () => {
   return (
     <div>
@@ -29,7 +27,6 @@ const LandingPage = () => {
       <ClientReviews />
       <PricingSection />
       <HomePageFaqs />
-      <Footer/>
     </div>
   );
 };

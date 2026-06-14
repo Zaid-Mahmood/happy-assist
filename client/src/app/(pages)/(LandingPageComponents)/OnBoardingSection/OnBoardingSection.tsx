@@ -1,7 +1,7 @@
 import Image from "next/image";
-import img1 from "@/assets/onboarding/img-1.png";
-import img2 from "@/assets/onboarding/img-2.png";
-import img3 from "@/assets/onboarding/main-img.png";
+import img1 from "@/assets/home-page-imgs/onboarding/img-1.png";
+import img2 from "@/assets/home-page-imgs/onboarding/img-2.png";
+import img3 from "@/assets/home-page-imgs/onboarding/main-img.png";
 
 const OnBoardingSection = () => {
   const boardingSteps = [

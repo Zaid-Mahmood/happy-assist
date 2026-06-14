@@ -11,7 +11,7 @@ import dropDownIcon from "@/assets/navbar-imgs/dropDown-icon.png";
 // import { useBookDemo } from "@/app/(components)/(CommonComponents)/BookDemo/BookDemoContext";
 
 const navLinks = [
-    { label: "Pricing", href: "#" },
+    { label: "Pricing", href: "/pricing/" },
     { label: "Industries", href: "#" },
     { label: "Blog", href: "#" },
     { label: "Contact Us", href: "#" },

@@ -1,5 +1,5 @@
 import PricingPlans from "./PricingPlans";
-import lineImg from "@/assets/pricing-section-imgs/line-img.png";
+import lineImg from "@/assets/home-page-imgs/pricing-section-imgs/line-img.png";
 import Image from "next/image";
 
 const PricingSection = () => {

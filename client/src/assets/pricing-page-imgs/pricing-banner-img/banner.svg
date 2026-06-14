@@ -1,0 +1,29 @@
+<svg width="1440" height="719" viewBox="0 0 1440 719" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_177_21)">
+<rect width="1440" height="720" transform="translate(0 -1)" fill="url(#paint0_linear_177_21)"/>
+<rect width="96" height="1199" transform="matrix(-1 0 0 1 1440 -241)" fill="black" fill-opacity="0.01"/>
+<rect width="96" height="1199" transform="matrix(-1 0 0 1 1344 -241)" fill="black" fill-opacity="0.01"/>
+<rect width="96" height="1199" transform="matrix(-1 0 0 1 1248 -241)" fill="black" fill-opacity="0.01"/>
+<rect width="96" height="1199" transform="matrix(-1 0 0 1 1152 -241)" fill="black" fill-opacity="0.01"/>
+<rect width="96" height="1199" transform="matrix(-1 0 0 1 1056 -241)" fill="black" fill-opacity="0.01"/>
+<rect width="96" height="1199" transform="matrix(-1 0 0 1 960 -241)" fill="black" fill-opacity="0.01"/>
+<rect width="96" height="1199" transform="matrix(-1 0 0 1 864 -241)" fill="black" fill-opacity="0.01"/>
+<rect width="96" height="1199" transform="matrix(-1 0 0 1 768 -241)" fill="black" fill-opacity="0.01"/>
+<rect width="96" height="1199" transform="matrix(-1 0 0 1 672 -241)" fill="black" fill-opacity="0.01"/>
+<rect width="96" height="1199" transform="matrix(-1 0 0 1 576 -241)" fill="black" fill-opacity="0.01"/>
+<rect width="96" height="1199" transform="matrix(-1 0 0 1 480 -241)" fill="black" fill-opacity="0.01"/>
+<rect width="96" height="1199" transform="matrix(-1 0 0 1 384 -241)" fill="black" fill-opacity="0.01"/>
+<rect width="96" height="1199" transform="matrix(-1 0 0 1 288 -241)" fill="black" fill-opacity="0.01"/>
+<rect width="96" height="1199" transform="matrix(-1 0 0 1 192 -241)" fill="black" fill-opacity="0.01"/>
+<rect width="96" height="1199" transform="matrix(-1 0 0 1 96 -241)" fill="black" fill-opacity="0.01"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_177_21" x1="720" y1="0" x2="720" y2="720" gradientUnits="userSpaceOnUse">
+<stop offset="0.5" stop-color="white"/>
+<stop offset="1" stop-color="#049595"/>
+</linearGradient>
+<clipPath id="clip0_177_21">
+<rect width="1440" height="720" fill="white" transform="translate(0 -1)"/>
+</clipPath>
+</defs>
+</svg>

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import voiceTransitionImg from "@/assets/banner-imgs/voice-transition-img.png";
+import voiceTransitionImg from "@/assets/home-page-imgs/banner-imgs/voice-transition-img.png";
 import { FaMicrophone } from "react-icons/fa";
 
 const voices = [

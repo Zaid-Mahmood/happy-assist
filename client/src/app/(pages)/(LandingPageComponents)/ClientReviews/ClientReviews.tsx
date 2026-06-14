@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useFetchData } from "@/app/customhooks/useFetchData";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
-import blogquote from "@/assets/client-reviews-imgs/quotes.png";
+import blogquote from "@/assets/home-page-imgs/client-reviews-imgs/quotes.png";
 
 type ClientReviewCard = {
   id: number;
